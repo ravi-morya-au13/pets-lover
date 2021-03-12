@@ -65,7 +65,7 @@ app.use('/', addpetroutes)
 
 // for getting all the orders made:
 
-
+// app.use("/cats",require("./models/cats"));
 
 app.use((req, res, next) => {
     const error = new Error('Not Found');

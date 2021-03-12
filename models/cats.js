@@ -2,7 +2,7 @@ $.ajax({
     url: 'https://api.thecatapi.com/v1/breeds',
     type: 'GET',
     dataType: 'json',
-    headers: { 'x-api-key': 'a9e89407-c340-4890-844e-7076d26bb0b1' },
+    headers: { 'x-api-key': '21a698bf-634b-4dea-a5f9-e40cb9f9cbd7' },
     success: function (data) {
         for (let i = 0; i < data.length; i++) {
             $('#breed_select').append('<option id="' + data[i].id + '">' + data[i].name + '</option>')

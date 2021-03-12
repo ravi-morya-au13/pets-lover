@@ -6,11 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev":"nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ajax": "0.0.4",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
