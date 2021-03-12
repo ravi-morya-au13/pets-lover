@@ -81,6 +81,9 @@ app.use((error, req, res, next) => {
         }
     })
 })
+app.get("/",(req,res)=>{
+    res.redirect("/homepage")
+})
 
 app.listen(port, () => {
     console.log(`listening to port ${port}`)
