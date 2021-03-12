@@ -1,8 +1,15 @@
 const mongoose = require("mongoose")
 const adminSchema = new mongoose.Schema({
-    bookname: String,
-    bookdes: String,
+    petname:String,
+    age:String,
+    vaccinated:String,
+    trained:String,
+    category:String,
+    breeds:String,
+    location:String,
+    color:String,
+    description:String
 
 })
-const Bookdata = new mongoose.model("petdata", adminSchema)
-module.exports = Bookdata
+const petdata = new mongoose.model("petdatadata", adminSchema)
+module.exports = petdata

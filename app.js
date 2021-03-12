@@ -34,10 +34,10 @@ const loginroutes = require('./api/routes/logincustom')
 
 
 const adminroutes = require('./api/routes/admin')
-const bookaddroutes = require('./api/routes/addbookroute')
+const addpetroutes = require('./api/routes/addpet')
 // const paymentroutes = require('./api/routes/payment')
 //admin side api
-const productroutes = require('./api/routes/product')
+const petroutes = require('./api/routes/pet')
 
 // customer side api
 
@@ -55,13 +55,13 @@ app.use('/', loginroutes);
 app.use('/', adminroutes)
 
 // for admin to add books
-app.use('/', bookaddroutes)
+app.use('/', addpetroutes)
 
 // for payment
 // app.use('/', paymentroutes)
 
 // for getting list of all product:
-app.use('/', productroutes)
+app.use('/', addpetroutes)
 
 // for getting all the orders made:
 

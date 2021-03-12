@@ -1,73 +1,240 @@
+
+
+
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>HOME</title>
-</head>
-
-<body>
+    <title>PetShop</title>
+  </head>
+  <body>
     <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">BOOKS4U</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/signup">SIGNUP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">LOGIN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">ADMIN</a>
-                    </li>
-
-
-
-
-
-                </ul>
-
-            </div>
+        <a class="navbar-brand" href="#">PetShop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+  
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="/admin">ADMIN</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-    <style>
-        body {
-            background-image: url('https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_960_720.jpg');
-        }
-    </style>
+      </nav>
+
+      
+      
+      
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://source.unsplash.com/1600x900/?cats," alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://source.unsplash.com/1600x900/?dogs" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://source.unsplash.com/1600x900/?cats" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
+      <div class="row mt-4 ml-3 mr-3 mb-5">
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1567306475/evbgbs74pwo77qonk7ol.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rocky</h5>
+              <p class="card-text">Age: 1</p>
+              <p class="card-text">Breed: beagle</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d6b32eb39ed542d573e72a3" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d6b32eb39ed542d573e72a3" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568125594/tjcsjcjl36qrkulpnw4g.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Simbha</h5>
+              <p class="card-text">Age: 4 months</p>
+              <p class="card-text">Breed: Pug</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d77b29b8c26f10cd3d25215" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d77b29b8c26f10cd3d25215" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568257391/ntik0m53f7ssupsccveu.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Liana</h5>
+              <p class="card-text">Age: 4 months</p>
+              <p class="card-text">Breed: Dwarf cat</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d79b56f2aaef20017969f01" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d79b56f2aaef20017969f01" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568260402/ju4itqaejpjlojqrjz59.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Koda</h5>
+              <p class="card-text">Age: 3 Years</p>
+              <p class="card-text">Breed: German Shepherd</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d79c132b83cea0017de9391" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d79c132b83cea0017de9391" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568262729/kwmwym9uk9p7kr5uid49.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">jack</h5>
+              <p class="card-text">Age: 4 months</p>
+              <p class="card-text">Breed: Boston Terrier</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d79ca4a9b4ea100170b2e7b" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d79ca4a9b4ea100170b2e7b" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568264895/rrtkrssdbealmzynyli2.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jack</h5>
+              <p class="card-text">Age: 1 Years</p>
+              <p class="card-text">Breed: Bulldog</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d79d2bfbca7ff0017955988" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d79d2bfbca7ff0017955988" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1568718268/sokmxkrhlikvi0ruypim.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Saave</h5>
+              <p class="card-text">Age: 4 months</p>
+              <p class="card-text">Breed: Belgian Shepherd Dog (Laekenois)</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d80bdbd8871a50c6f66b085" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d80bdbd8871a50c6f66b085" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1569499611/d5uz9ufkcvfttbmocgjb.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Murphy</h5>
+              <p class="card-text">Age: 1 month</p>
+              <p class="card-text">Breed: Bengal</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d8ca9dcae8eb1001721ef5c" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d8ca9dcae8eb1001721ef5c" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1569642679/qpzhvx85r1bdva0m8zhv.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Jackob</h5>
+              <p class="card-text">Age: 1 Year</p>
+              <p class="card-text">Breed: Beangl</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d8ed8b8a3e0a500173e16ac" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d8ed8b8a3e0a500173e16ac" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1569643553/jawsnoleg3swg0vhbm6a.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tom</h5>
+              <p class="card-text">Age: 2 Years</p>
+              <p class="card-text">Breed: Bengal</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5d8edc21a3e0a500173e16ae" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5d8edc21a3e0a500173e16ae" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xl-3 col-lg-4 col-sm-6 mb-5">
+          <div class="card">
+            <img src="https://res.cloudinary.com/petfinder/image/upload/v1573728275/twqoq0foerlolmhtxdxx.jpg" id="cardImg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Snowy</h5>
+              <p class="card-text">Age: 2</p>
+              <p class="card-text">Breed: Siberian Husky</p>
+            </div>
+            <div class="card-footer">
+              <a href="/petprofile/5dcd301362d97b0017a9f4ff" class="btn btn-sm mx-2 detailsBtn">Details</a>
+              <a class="btn btn-sm btn-outline-primary mx-2 btn-adopt" value="5dcd301362d97b0017a9f4ff" href="#">Adopt</a>
+            </div>
+          </div>
+        </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    -->
-</body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

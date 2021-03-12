@@ -1,26 +1,34 @@
 const express = require('express');
 const router = express.Router()
 const mongoose = require('mongoose')
-const Product = require("../../models/pets")
-const Admindata = require("../../models/admin")
+const Product = require("../../models/pet")
+const Admindata = require("../../models/admin");
+const pet = require('../../models/pet');
 
 
-router.get('/pets', (req, res, next) => {
+router.get('/pet', (req, res, next) => {
     Product.find()
-        .select("petname petprice pettype _id")
+        .select("petage petbreed petprice _id")
         .exec()
         .then(docs => {
             const response = {
                 count: docs.length,
                 products: docs.map(doc => {
                     return {
-                        petname: doc.petname,
-                        petprice: doc.petprice,
-                        pettype: doc.pettype,
+                        petname:doc.petname,
+                        age:doc.age,
+                        vaccinated:doc.vaccinated,
+                        trained:doc.trained,
+                        category:doc.category,
+                        breeds:doc.breeds,
+                        location:doc.location,
+                        color:doc.color,
+                        description:doc.description,
+                        petprice:doc.petprice,
                         _id: doc._id,
                         request: {
                             type: 'GET',
-                            url: 'http://localhost:5000/pets/' + doc._id
+                            url: 'http://localhost:5000/pet/' + doc._id
                         }
                     }
                 })
@@ -29,7 +37,7 @@ router.get('/pets', (req, res, next) => {
                 res.status(200).json(response)
             } else {
                 res.status(404).json({
-                    message: "No pets in the list"
+                    message: "No pet in the list"
                 })
             }
         })
@@ -42,26 +50,40 @@ router.get('/pets', (req, res, next) => {
 
 
 })
-router.post('/products', (req, res, next) => {
-    const product = new Product({
+router.post('/pets', (req, res, next) => {
+    const product = new pet({
         _id: new mongoose.Types.ObjectId,
-        bookname: req.body.bookname,
-        booktype: req.body.booktype,
-        bookprice: req.body.bookprice
+        petname:req.body.name,
+        age:req.body.age,
+        vaccinated:req.body.vaccinated,
+        trained:req.body.trained,
+        category:req.body.category,
+        breeds:req.body.breeds,
+        location:req.body.location,
+        color:req.body.color,
+        description:req.body.description,
+        petprice:req.bodypetprice
     })
-    pet.save()
+    product.save()
         .then(result => {
             console.log(result)
             res.status(200).json({
-                message: "Pet Added sucessfully",
-                addedpet: {
-                    petname: result.petname,
-                    pettype: result.pettype,
-                    petprice: result.petprice,
+                message: "ADDED PET SUCESSFULLLY",
+                createdProduct: {
+                    petname:result.name,
+                    age:result.age,
+                    vaccinated:result.vaccinated,
+                    trained:result.trained,
+                    category:result.category,
+                    breeds:result.breeds,
+                    location:result.location,
+                    color:result.color,
+                    description:result.description,
+                    petprice:result.petprice,
                     _id: result._id,
                     request: {
                         type: 'GET',
-                        url: 'http://localhost:5000/pets/' + result._id
+                        url: 'http://localhost:5000/pet/' + result._id
                     }
                 }
             })
@@ -74,10 +96,10 @@ router.post('/products', (req, res, next) => {
         });
 
 })
-router.get('/pets/:petid', (req, res, next) => {
-    const id = req.params.petid
+router.get('/pets/:petId', (req, res, next) => {
+    const id = req.params.petId
     Product.findById(id)
-        .select('petname petprice petprice _id')
+        .select('petage petbreed petprice _id')
         .exec()
         .then(doc => {
             console.log("from database" + doc)
@@ -87,7 +109,7 @@ router.get('/pets/:petid', (req, res, next) => {
                     request: {
                         type: 'GET',
                         description: "get all the pets",
-                        url: 'http://localhost:5000/pets'
+                        url: 'http://localhost:5000/pet'
                     }
                 })
             } else {
@@ -101,8 +123,8 @@ router.get('/pets/:petid', (req, res, next) => {
             res.status(500).json({ error: err })
         })
 })
-router.patch('/pets/:petId', (req, res, next) => {
-    const id = req.params.pettId
+router.patch('/pet/:petId', (req, res, next) => {
+    const id = req.params.petId
     const updateops = {};
     for (const ops of req.body) {
         updateops[ops.propName] = ops.value;
@@ -115,7 +137,7 @@ router.patch('/pets/:petId', (req, res, next) => {
                 message: "PET UPDATED",
                 request: {
                     type: 'GET',
-                    url: "http://localhost:5000/pets/" + id
+                    url: "http://localhost:5000/pet/" + id
 
                 }
             });
@@ -127,7 +149,7 @@ router.patch('/pets/:petId', (req, res, next) => {
             })
         })
 })
-router.delete('/pets/:petId', (req, res, next) => {
+router.delete('/pet/:petId', (req, res, next) => {
     const id = req.params.petId
     Product.remove({ _id: id })
         .exec()
@@ -136,7 +158,7 @@ router.delete('/pets/:petId', (req, res, next) => {
                 message: "pet deleted",
                 request: {
                     type: 'GET',
-                    url: "http://localhost:5000/pets"
+                    url: "http://localhost:5000/pet"
                 }
             })
         })

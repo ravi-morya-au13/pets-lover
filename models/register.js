@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-// save method k call karne se pehle password bcrypt karo
+// before bcrypt save password
 userSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
 

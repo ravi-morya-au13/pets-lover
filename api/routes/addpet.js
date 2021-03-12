@@ -3,22 +3,26 @@ const multer = require("multer")
 const path = require("path");
 const router = express.Router()
 const mongoose = require("mongoose")
-const Bookdata = require("../../models/adminlogin2")
+const petdata = require("../../models/adminlogin2")
 
 router.post("/upload", async (req, res) => {
     try {
-        const petdetails = new petdata({
-            petname: req.body.petname,
-            petage: req.body.petage,
-            pettype:req.body.pettype,
-            breed: req.body.breed,
-            petdetails:rq.body.petdetails
-
+        const petdetails = new petdetails({
+            petname:req.body.name,
+            age:req.body.age,
+            vaccinated:req.body.vaccinated,
+            trained:req.body.trained,
+            category:req.body.category,
+            breeds:req.body.breeds,
+            location:req.body.location,
+            color:req.body.color,
+            description:req.body.description,
+            petprice:req.body.petprice
         })
         console.log(req.body.petname)
-        // console.log(petdetails)
-        const created = await petdetails.save()
-        res.send("sucessfuly added the pet in cart")
+        // console.log(description)
+        const created = await petDetail.save()
+        res.send("sucessfuly added the pet")
 
     } catch (err) {
         res.send(err)
